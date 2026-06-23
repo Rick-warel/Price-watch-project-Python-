@@ -1,6 +1,8 @@
 # Environnement virtuel
 venv/
 
+.env
+
 # Sorties générées par le projet
 output/
 

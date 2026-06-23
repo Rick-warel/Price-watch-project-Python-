@@ -1,11 +1,8 @@
 import requests
 import json
-from pathlib import Path
 from price_watch.models import Product
 
 
-
-chemin_fichier_json = Path("products_dump.json")
 
 def fetch_products_from_api(chemin_fichier_json):
     
@@ -48,10 +45,6 @@ def load_local_products(chemin_fichier_json):
     else:
         print(f"❌ Le fichier {chemin_fichier_json} n'existe pas.")
         return []
-
-
     
-fetch_products_from_api(chemin_fichier_json)
-products = load_local_products(chemin_fichier_json)
-for product in products:
-    print(product)
+    
+
