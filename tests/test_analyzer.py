@@ -43,8 +43,9 @@ def test_calculate_stdev_with_not_enough_data():
     
     analyzer = Analyzer(products)
     
-    with pytest.raises(ValueError):
-        analyzer.calculate_stdev() 
+    with pytest.raises(ValueError) as excinfo:
+        analyzer.calculate_stdev()
+        
 
 
 def test_calculate_stdev_with_enough_data():

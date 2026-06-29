@@ -1,0 +1,16 @@
+==================================================
+       RAPPORT AUTOMATIQUE DE VEILLE TARIFAIRE     
+==================================================
+
+📊 STATISTIQUES GLOBALES DU MARCHÉ :
+----------------------------------
+
+Le nombre total de cartes analysées : 10 
+
+La moyenne globale des prix : 0 
+
+L'écart-type : 0 
+✅ Aucune anomalie détectée sur ce sprint. Les prix sont stables.
+
+==================================================
+Fin du rapport d'analyse.
