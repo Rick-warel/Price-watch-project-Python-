@@ -34,6 +34,18 @@ def test_init_filters_out_products_with_zero_or_negative_price():
     assert analyzer.list_produit_sup_0[0].id == "1"
 
 
+def test_init_limits_products_when_limit_is_provided():
+    products = [
+        Product(id="1", name="Carte A", price=10.0),
+        Product(id="2", name="Carte B", price=20.0),
+        Product(id="3", name="Carte C", price=30.0),
+    ]
+
+    analyzer = Analyzer(products, limit=2)
+
+    assert len(analyzer.list_produit_sup_0) == 2
+    assert [product.id for product in analyzer.list_produit_sup_0] == ["1", "2"]
+
 
 def test_calculate_stdev_with_not_enough_data():
     

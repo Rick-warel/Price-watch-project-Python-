@@ -1,0 +1,17 @@
+{
+    "metadata": {
+        "total_analyzed": 20,
+        "market_mean": 58.413333333333334,
+        "market_stdev": 71.8527423342518,
+        "anomalies_count": 1
+    },
+    "anomalies": [
+        {
+            "id": "ru1-1",
+            "name": "Venusaur",
+            "price": 279.97,
+            "currency": "USD",
+            "source": "Pokémon TCG API"
+        }
+    ]
+}

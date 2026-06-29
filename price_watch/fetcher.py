@@ -4,7 +4,7 @@ import json
 from price_watch.models import Product
 
 
-def fetch_products_from_api(chemin_fichier_json, url="https://api.pokemontcg.io/v2/cards?pageSize=20"):
+def fetch_products_from_api(chemin_fichier_json, url="https://api.pokemontcg.io/v2/cards?pageSize=60"):
     response = requests.get(url)
     response.raise_for_status()  # lève une exception si status != 200, plus propre que if/else
     

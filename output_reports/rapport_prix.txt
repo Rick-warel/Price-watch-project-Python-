@@ -5,12 +5,14 @@
 📊 STATISTIQUES GLOBALES DU MARCHÉ :
 ----------------------------------
 
-Le nombre total de cartes analysées : 10 
+Le nombre total de cartes analysées : 20 
 
-La moyenne globale des prix : 0 
+La moyenne globale des prix : 58.413333333333334 
 
-L'écart-type : 0 
-✅ Aucune anomalie détectée sur ce sprint. Les prix sont stables.
+L'écart-type : 71.8527423342518 
+⚠️ 1 produit(s) suspect(s) identifié(s) :
+
+ 1. 📦 Venusaur - 279.97 USD (Source: Pokémon TCG API)
 
 ==================================================
 Fin du rapport d'analyse.

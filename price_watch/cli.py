@@ -1,25 +1,36 @@
-from pathlib import Path
-from price_watch.fetcher import fetch_products_from_api
-from price_watch.fetcher import load_local_products
-from price_watch.analyzer import Analyzer
+import argparse
 
-
-
-def main():
-    chemin_fichier_json = Path("products_dump.json")
-    appel_api = fetch_products_from_api(chemin_fichier_json)
-    products = load_local_products(chemin_fichier_json)
-
-    analyzer = Analyzer(products)
-    mean_price = analyzer.calculate_mean()
-    stdev_price = analyzer.calculate_stdev()
-    list_anomalies = analyzer.find_anomalies(mean_price, stdev_price)
+def parse_arguments():
+    """
+    Configure et analyse les arguments de la ligne de commande.
+    :return: Un objet contenant les arguments capturés (args.threshold, args.fetch, args.output)
+    """
+    # 1. Création du parser avec une description claire de l'outil
+    parser = argparse.ArgumentParser(
+        description="🛡️ Price Watch - Détecteur d'anomalies de prix pour cartes Pokémon"
+    )
     
-    print(mean_price)
-    print(stdev_price)
-    print("---------list des produits avec anomalie---------")
-    for product in list_anomalies:
-        print(product)
+    # 2. Option pour régler la sensibilité statistique (le fameux facteur multiplicateur)
+    parser.add_argument(
+        "-t", "--threshold",
+        type=float,
+        default=2.0,
+        help="Facteur multiplicateur de l'écart-type pour le seuil d'anomalie (Défaut : 2.0)"
+    )
     
-if __name__ == "__main__":
-    main()
+    # 3. Option pour forcer le téléchargement depuis l'API (Drapeau/Flag True ou False)
+    parser.add_argument(
+        "-f", "--fetch",
+        action="store_true",
+        help="Force la récupération de nouvelles données depuis l'API Pokémon et met à jour le cache"
+    )
+    
+    # 4. Option pour personnaliser le dossier de sortie des rapports
+    parser.add_argument(
+        "-o", "--output",
+        type=str,
+        default="output_reports",
+        help="Nom du dossier où seront sauvegardés les rapports (Défaut : output_reports)"
+    )
+    
+    return parser.parse_args()
