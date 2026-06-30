@@ -1,11 +1,18 @@
 {
     "metadata": {
-        "total_analyzed": 20,
-        "market_mean": 58.413333333333334,
-        "market_stdev": 71.8527423342518,
-        "anomalies_count": 1
+        "total_analyzed": 60,
+        "market_mean": 45.683055555555555,
+        "market_stdev": 53.478643845367685,
+        "anomalies_count": 2
     },
     "anomalies": [
+        {
+            "id": "ex3-1",
+            "name": "Absol",
+            "price": 153.87,
+            "currency": "USD",
+            "source": "Pokémon TCG API"
+        },
         {
             "id": "ru1-1",
             "name": "Venusaur",

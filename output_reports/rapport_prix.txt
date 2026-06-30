@@ -5,14 +5,15 @@
 📊 STATISTIQUES GLOBALES DU MARCHÉ :
 ----------------------------------
 
-Le nombre total de cartes analysées : 20 
+Le nombre total de cartes analysées : 60 
 
-La moyenne globale des prix : 58.413333333333334 
+La moyenne globale des prix : 45.683055555555555 
 
-L'écart-type : 71.8527423342518 
-⚠️ 1 produit(s) suspect(s) identifié(s) :
+L'écart-type : 53.478643845367685 
+⚠️ 2 produit(s) suspect(s) identifié(s) :
 
- 1. 📦 Venusaur - 279.97 USD (Source: Pokémon TCG API)
+ 1. 📦 Absol - 153.87 USD (Source: Pokémon TCG API)
+ 2. 📦 Venusaur - 279.97 USD (Source: Pokémon TCG API)
 
 ==================================================
 Fin du rapport d'analyse.

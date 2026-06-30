@@ -13,7 +13,7 @@ def main():
     # 2. Gestion du cache / API
     if params.fetch or not chemin_fichier_json.exists():
         print("🔄 Récupération des données fraîche depuis l'API Pokémon...")
-        fetch_products_from_api()
+        fetch_products_from_api(chemin_fichier_json=chemin_fichier_json)
     else:
         print("📂 Chargement des données depuis le cache local (products_dump.json)...")
     
